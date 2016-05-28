@@ -39,14 +39,7 @@ Lista ordena(Lista l){
           return insord(cabeza(l),ordena(resto(l)));    
 }        
 
-/* Solamente para archivos
-void implista(Lista l, FILE *out){
-     if(!esvacia(l)){
-          impelem(cabeza(l),out);
-          implista(resto(l),out);
-          }                    
-}
-*/
+//Imprime normal
 
 void implista(Lista l){
      if(!esvacia(l)){
@@ -54,6 +47,15 @@ void implista(Lista l){
           implista(resto(l));
           }                    
 }
+
+/* ~~~~~SOLO PARA ARCHIVOS~~~~~
+void implista(Lista l, FILE *in){
+     if(!esvacia(l)){
+          impelem(cabeza(l),in);
+          implista(resto(l),in);
+          }                    
+}
+*/
 
 int numelem(Lista l){
     if(esvacia(l))
