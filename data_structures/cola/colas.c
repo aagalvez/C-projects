@@ -9,5 +9,15 @@ int main(){
     puts("-----------------");
     impcola(formar(desformar(q),5));
 
+    printf("\n");
+    Cola a=nueva();
+    int i;
+    char c;
+   	
+    for(i=1;i<=10;i++) 
+    	a=formar(a,i+64);
+    
+    impcola(a); 
+
     return 1;
 }
