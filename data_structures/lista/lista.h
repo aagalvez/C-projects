@@ -114,8 +114,16 @@ Lista comunes(Lista l1, Lista l2){
 }                 
      
 Lista dif(Lista l1, Lista l2){
-         if(esvacia(l2))
-            return l1;
-         else if(!estaen(cabeza(l1),l2))
-                 return pegasr(cons(cabeza(l1),vacia()), dif(resto(l1),l2));
+      if(esnuevo(l2))
+          return l1;
+        else{
+              Lista a =comunes(l1,l2), b=l1;
+
+              while(!esnuevo(l2)){
+                    if(estaen(cabeza(l2),a))
+                          b= borra(cabeza(l2),b);
+                          l2 = resto(l2);
+              }
+              return b;
+        }
 }
