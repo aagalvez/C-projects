@@ -71,4 +71,5 @@ Dicbin borrar(Elem e,Dicbin a){
 				}
 			
 		}
-}       
+}
+
